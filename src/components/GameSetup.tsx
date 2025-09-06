@@ -135,7 +135,7 @@ export default function GameSetup() {
               <div className="flex gap-2">
                 <button
                   onClick={() => setGameLength(10)}
-                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  className={`flex-1 py-2 px-2 rounded-lg font-medium transition-colors text-sm ${
                     gameLength === 10
                       ? 'bg-green-600 text-white'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -145,7 +145,7 @@ export default function GameSetup() {
                 </button>
                 <button
                   onClick={() => setGameLength(20)}
-                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  className={`flex-1 py-2 px-2 rounded-lg font-medium transition-colors text-sm ${
                     gameLength === 20
                       ? 'bg-green-600 text-white'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'

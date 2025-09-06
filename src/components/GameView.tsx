@@ -115,15 +115,14 @@ export default function GameView() {
             <p className="text-gray-600">Heittoetäisyys</p>
           </div>
 
-          <div className="flex flex-col items-center gap-4 mb-6">
-            <span className="text-lg">Valitse osumat:</span>
+          <div className="flex justify-center mb-6">
             <div className="flex gap-2">
               {[0, 1, 2, 3, 4, 5].map(num => (
                 <button
                   key={num}
                   onClick={() => handleHitSelection(num)}
                   disabled={inputHits !== ''}
-                  className={`w-12 h-12 rounded-lg font-semibold transition-all ${
+                  className={`min-w-12 h-12 rounded-lg font-semibold transition-all ${
                     inputHits === num.toString()
                       ? 'bg-green-600 text-white shadow-lg scale-110'
                       : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -133,17 +132,6 @@ export default function GameView() {
                 </button>
               ))}
             </div>
-            
-            {inputHits !== '' && (
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600 mb-2">
-                  +{currentDistance * parseInt(inputHits)} pistettä
-                </div>
-                <div className="text-sm text-gray-600 animate-pulse">
-                  Tallentamassa automaattisesti...
-                </div>
-              </div>
-            )}
           </div>
         </div>
 
